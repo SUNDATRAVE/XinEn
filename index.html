@@ -1,287 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Professional Digital Chess Clock | OEM Manufacturer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B2B Digital Timer Solution | OEM & Wholesale</title>
+  <style>
+    .gallery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+    .gallery-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      background: #020617;
+      border-radius: 20px;
+      padding: 40px;
+      opacity: 0;
+      transform: translateY(60px);
+      animation: fadeUp 0.9s ease forwards;
+    }
+    .gallery-item:nth-child(odd) {
+      animation-delay: 0.2s;
+    }
+    .gallery-item:nth-child(even) {
+      animation-delay: 0.4s;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 16px;
+    }
+    .gallery-item p {
+      font-size: 1.05rem;
+      color: #cbd5f5;
+      line-height: 1.6;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 900px) {
+      .gallery-item {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-item {
+      background: #020617;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .gallery-item p {
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
 
-<style>
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{margin:0;background:#fff;color:#222;line-height:1.6}
-section{max-width:1200px;margin:auto;padding:90px 20px}
-h1,h2,h3{margin:0}
-h2{text-align:center;font-size:36px;margin-bottom:60px}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #020617, #020617);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    header p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #cbd5f5;
+    }
+    .cta {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 14px 28px;
+      background: #22c55e;
+      color: #020617;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(34,197,94,0.4);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .product img:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #f8fafc;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li {
+      margin-bottom: 14px;
+      padding-left: 26px;
+      position: relative;
+      color: #e5e7eb;
+    }
+    .features li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: bold;
+    }
+    .b2b {
+      background: #020617;
+      border-radius: 20px;
+      padding: 60px;
+      margin-top: 80px;
+    }
+    .b2b h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .b2b p {
+      font-size: 1.1rem;
+      color: #cbd5f5;
+      max-width: 800px;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 80px;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .contact-card {
+      display: inline-block;
+      background: #020617;
+      padding: 30px 50px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-6px);
+    }
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 900px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+    }
+  .feature-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 100px;
+      opacity: 0;
+      transform: translateY(80px);
+      animation: fadeUp 1s ease forwards;
+    }
+    .feature-block.reverse {
+      direction: rtl;
+    }
+    .feature-block.reverse .feature-text {
+      direction: ltr;
+    }
+    .feature-block img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .feature-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .feature-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #cbd5f5;
+      max-width: 520px;
+    }
+    @media (max-width: 900px) {
+      .feature-block {
+        grid-template-columns: 1fr;
+      }
+    }
 
-/* ---------- HERO ---------- */
-.hero{
-  background:#111;
-  color:#fff;
-  padding:120px 20px;
-  text-align:center
-}
-.hero h1{font-size:44px;margin-bottom:20px}
-.hero p{font-size:20px;max-width:720px;margin:auto}
-.hero a{
-  display:inline-block;
-  margin-top:30px;
-  background:#25D366;
-  color:#fff;
-  padding:16px 34px;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:18px
-}
-
-/* ---------- PRODUCT FEATURES ---------- */
-.feature{
-  display:flex;
-  align-items:center;
-  gap:60px;
-  margin-bottom:120px;
-  opacity:0
-}
-.feature.reverse{flex-direction:row-reverse}
-.feature img{
-  width:100%;
-  border-radius:14px;
-  box-shadow:0 15px 40px rgba(0,0,0,.2)
-}
-.feature-text{flex:1}
-.feature-text h3{font-size:30px;margin-bottom:16px}
-.feature-text p{font-size:18px;color:#555}
-
-/* ---------- Animations ---------- */
-.fade-up{transform:translateY(80px);animation:fadeUp 1s forwards}
-.fade-left{transform:translateX(-80px);animation:fadeLeft 1s forwards}
-.fade-right{transform:translateX(80px);animation:fadeRight 1s forwards}
-.zoom-in{transform:scale(.9);animation:zoomIn 1s forwards}
-
-@keyframes fadeUp{to{opacity:1;transform:none}}
-@keyframes fadeLeft{to{opacity:1;transform:none}}
-@keyframes fadeRight{to{opacity:1;transform:none}}
-@keyframes zoomIn{to{opacity:1;transform:none}}
-
-/* ---------- COMPANY TRUST ---------- */
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px
-}
-.trust-card{
-  background:#f7f7f7;
-  padding:50px 30px;
-  border-radius:16px;
-  text-align:center;
-  opacity:0
-}
-.trust-card h3{font-size:34px;margin-bottom:10px}
-.trust-card p{color:#666}
-
-/* ---------- FORM ---------- */
-.form-box{
-  max-width:700px;
-  margin:auto;
-  background:#f7f7f7;
-  padding:50px;
-  border-radius:20px
-}
-.form-box input,.form-box textarea{
-  width:100%;
-  padding:14px;
-  margin-bottom:18px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  font-size:16px
-}
-.form-box button{
-  background:#111;
-  color:#fff;
-  border:none;
-  padding:16px 30px;
-  border-radius:30px;
-  font-size:18px;
-  cursor:pointer
-}
-
-/* ---------- CONTACT ---------- */
-.contact{
-  background:#111;
-  color:#fff;
-  text-align:center;
-  padding:80px 20px
-}
-
-/* ---------- WhatsApp ---------- */
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:60px;
-  height:60px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  color:#fff;
-  text-decoration:none;
-  box-shadow:0 10px 20px rgba(0,0,0,.3)
-}
-
-/* ---------- Responsive ---------- */
-@media(max-width:900px){
-  .feature,.feature.reverse{flex-direction:column}
-}
 </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Professional Digital Chess Clock Manufacturer</h1>
-  <p>OEM & wholesale digital chess timers for tournaments, clubs and global distributors</p>
-  <a href="https://wa.me/861340592964" target="_blank">Chat on WhatsApp</a>
-</div>
+<header>
+  <h1>Professional Digital Timer for Global B2B Buyers</h1>
+  <p>High-precision dual-display digital timer designed for chess clubs, competitions, training centers, and OEM/ODM wholesale distribution.</p>
+  <a class="cta" href="https://wa.me/861340592964">Contact on WhatsApp</a>
+</header>
 
-<!-- PRODUCT -->
-<section>
-<h2>Product Gallery & Key Selling Points</h2>
-
-<div class="feature fade-up">
-  <img src="images/product1.jpg">
-  <div class="feature-text">
-    <h3>Dual Large LCD Display</h3>
-    <p>Clear and readable timing information for both players.</p>
+<section class="product">
+  <img src="/mnt/data/219ff975-9454-43b9-998a-eb6b5e898642.jpg" alt="Digital Timer Product" />
+  <div class="features">
+    <h2>Product Highlights</h2>
+    <ul>
+      <li>Dual large LCD display for clear visibility</li>
+      <li>High-sensitivity buttons for professional use</li>
+      <li>Accurate time control for competitive environments</li>
+      <li>Durable housing suitable for long-term usage</li>
+      <li>Custom branding & packaging available (OEM/ODM)</li>
+    </ul>
   </div>
-</div>
-
-<div class="feature reverse fade-left">
-  <img src="images/product2.jpg">
-  <div class="feature-text">
-    <h3>High Precision Timing</h3>
-    <p>Millisecond-level accuracy for professional competitions.</p>
-  </div>
-</div>
-
-<div class="feature fade-right">
-  <img src="images/product3.jpg">
-  <div class="feature-text">
-    <h3>Professional Button Design</h3>
-    <p>Fast response buttons for tournament-level use.</p>
-  </div>
-</div>
-
-<div class="feature reverse zoom-in">
-  <img src="images/product4.jpg">
-  <div class="feature-text">
-    <h3>Durable Housing</h3>
-    <p>Strong ABS casing for long-term and high-frequency use.</p>
-  </div>
-</div>
-
-<div class="feature fade-up">
-  <img src="images/product5.jpg">
-  <div class="feature-text">
-    <h3>Compact & Portable</h3>
-    <p>Lightweight design for easy transport and storage.</p>
-  </div>
-</div>
-
-<div class="feature reverse fade-left">
-  <img src="images/product6.jpg">
-  <div class="feature-text">
-    <h3>Stable Performance</h3>
-    <p>Consistent timing even under intensive tournament use.</p>
-  </div>
-</div>
-
-<div class="feature fade-right">
-  <img src="images/product7.jpg">
-  <div class="feature-text">
-    <h3>Easy Operation</h3>
-    <p>User-friendly interface suitable for all skill levels.</p>
-  </div>
-</div>
-
-<div class="feature reverse zoom-in">
-  <img src="images/product8.jpg">
-  <div class="feature-text">
-    <h3>OEM Custom Branding</h3>
-    <p>Logo, packaging and color customization available.</p>
-  </div>
-</div>
-
-<div class="feature fade-up">
-  <img src="images/product9.jpg">
-  <div class="feature-text">
-    <h3>Wholesale Friendly MOQ</h3>
-    <p>Flexible MOQ supports distributors and resellers.</p>
-  </div>
-</div>
-
-<div class="feature reverse fade-left">
-  <img src="images/product10.jpg">
-  <div class="feature-text">
-    <h3>Global Export Ready</h3>
-    <p>Exported worldwide with stable supply capability.</p>
-  </div>
-</div>
-
 </section>
 
-<!-- COMPANY -->
-<section>
-<h2>Company Credentials & Trust</h2>
+<section class="gallery">
+  <h2 style="font-size:2.4rem;margin-bottom:60px;">Product Gallery & Key Selling Points</h2>
+  
+  <div class="feature-block">
+    <img src="images/product-1.jpg" alt="Dual Display" />
+    <div class="feature-text">
+      <h3>High Visibility Dual Display</h3>
+      <p>Large dual LCD screens ensure clear readability even in bright tournament environments, reducing errors and improving competition fairness.</p>
+    </div>
+  </div>
 
-<div class="trust-grid">
-  <div class="trust-card fade-up">
-    <h3>15+</h3>
-    <p>Years Manufacturing Experience</p>
+  <div class="feature-block reverse">
+    <img src="images/product-2.jpg" alt="Sensitive Buttons" />
+    <div class="feature-text">
+      <h3>Professional-Grade Button Control</h3>
+      <p>High-sensitivity mechanical buttons provide fast response and long lifespan, suitable for intensive professional use.</p>
+    </div>
   </div>
-  <div class="trust-card fade-left">
-    <h3>30+</h3>
-    <p>Export Countries</p>
+
+  <div class="feature-block">
+    <img src="images/product-3.jpg" alt="Durable Housing" />
+    <div class="feature-text">
+      <h3>Durable & Stable Structure</h3>
+      <p>Impact-resistant housing and internal stabilization design ensure long-term durability for clubs, schools, and tournaments.</p>
+    </div>
   </div>
-  <div class="trust-card fade-right">
-    <h3>50,000+</h3>
-    <p>Units Supplied Annually</p>
-  </div>
-  <div class="trust-card fade-up">
-    <h3>OEM/ODM</h3>
-    <p>Private Label Supported</p>
-  </div>
-  <div class="trust-card fade-left">
-    <h3>Factory</h3>
-    <p>Direct Manufacturer Supply</p>
-  </div>
-</div>
 </section>
 
-<!-- INQUIRY -->
-<section>
-<h2>Send Your Inquiry</h2>
-<div class="form-box">
-<form action="mailto:huang541920@gmail.com" method="post" enctype="text/plain">
-  <input name="Name" placeholder="Your Name" required>
-  <input name="Email" type="email" placeholder="Your Email" required>
-  <input name="Company" placeholder="Company Name">
-  <textarea name="Message" rows="5" placeholder="Your Inquiry"></textarea>
-  <button type="submit">Send Inquiry</button>
-</form>
-</div>
+<section class="b2b">
+  <h2>Why B2B Buyers Choose Us</h2>
+  <p>
+    We specialize in supplying reliable digital timing devices for international distributors, tournament organizers, educational institutions, and brand owners. With stable production capacity, flexible MOQ, and fast response, we help partners scale their business efficiently.
+  </p>
+  <p>
+    ✔ Factory-direct pricing<br />
+    ✔ Bulk order & private label support<br />
+    ✔ Export experience for global markets
+  </p>
 </section>
 
-<!-- CONTACT -->
-<div class="contact">
-  <h2>Contact Us</h2>
-  <p>WhatsApp / Phone: +86 1340592964</p>
-  <p>Email: huang541920@gmail.com</p>
-</div>
+<section class="company">
+  <h2 style="font-size:2.4rem;margin-bottom:60px;">Company Credentials & Trust</h2>
 
-<!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/861340592964" target="_blank">💬</a>
+  <div class="feature-block">
+    <img src="images/company-1.jpg" alt="Factory" />
+    <div class="feature-text">
+      <h3>Modern Manufacturing Facility</h3>
+      <p>Our factory operates with standardized production lines, ensuring consistent quality and stable monthly output.</p>
+    </div>
+  </div>
+
+  <div class="feature-block reverse">
+    <img src="images/company-2.jpg" alt="Quality Control" />
+    <div class="feature-text">
+      <h3>Strict Quality Control System</h3>
+      <p>Each unit undergoes multi-stage inspection to meet international export standards.</p>
+    </div>
+  </div>
+
+  <div class="feature-block">
+    <img src="images/company-3.jpg" alt="OEM" />
+    <div class="feature-text">
+      <h3>OEM & ODM Customization</h3>
+      <p>We support logo printing, packaging customization, and private-label production for global partners.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Get Wholesale Pricing Now</h2>
+  <div class="contact-card">
+    <p><strong>Phone:</strong> +86 1340592964</p>
+    <p><strong>WhatsApp:</strong> +86 1340592964</p>
+    <p style="margin-top:15px; color:#22c55e;">Fast response · Direct factory · Global shipping</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Professional Digital Timer Manufacturer | B2B Supply Only
+</footer>
 
 </body>
 </html>
