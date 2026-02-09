@@ -3,282 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B2B Digital Timer Solution | OEM & Wholesale</title>
-  <style>
-    .gallery-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 80px;
-    }
-    .gallery-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 40px;
-      background: #020617;
-      border-radius: 20px;
-      padding: 40px;
-      opacity: 0;
-      transform: translateY(60px);
-      animation: fadeUp 0.9s ease forwards;
-    }
-    .gallery-item:nth-child(odd) {
-      animation-delay: 0.2s;
-    }
-    .gallery-item:nth-child(even) {
-      animation-delay: 0.4s;
-    }
-    .gallery-item img {
-      width: 100%;
-      border-radius: 16px;
-    }
-    .gallery-item p {
-      font-size: 1.05rem;
-      color: #cbd5f5;
-      line-height: 1.6;
-    }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @media (max-width: 900px) {
-      .gallery-item {
-        grid-template-columns: 1fr;
-      }
-    }
-    .gallery-item {
-      background: #020617;
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    }
-    .gallery-item img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-    .gallery-item p {
-      font-size: 0.95rem;
-      color: #cbd5f5;
-    }
+  <title>Professional Digital Timer | OEM & Wholesale</title>
 
+  <style>
+    /* ===== Base ===== */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.6;
     }
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #020617, #020617);
+
+    h1, h2, h3 {
+      color: #111111;
+      margin-bottom: 16px;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      color: #ffffff;
+
+    p {
+      color: #374151;
+      margin-bottom: 16px;
     }
-    header p {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #cbd5f5;
-    }
-    .cta {
-      margin-top: 25px;
-      display: inline-block;
-      padding: 14px 28px;
-      background: #22c55e;
-      color: #020617;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(34,197,94,0.4);
-    }
+
     section {
       padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
+
+    /* ===== Header ===== */
+    header {
+      position: relative;
+      padding: 120px 20px;
+      text-align: center;
+      color: #ffffff;
+      background-image: url("images/header-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #e5e7eb;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: #22c55e;
+      color: #020617;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(34,197,94,0.4);
+    }
+
+    /* ===== Product Section ===== */
     .product {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
     }
+
     .product img {
       width: 100%;
       border-radius: 16px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
-    .product img:hover {
-      transform: scale(1.05) rotate(-1deg);
-    }
-    .features h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #f8fafc;
-    }
+
     .features ul {
       list-style: none;
       padding: 0;
     }
+
     .features li {
       margin-bottom: 14px;
       padding-left: 26px;
       position: relative;
-      color: #e5e7eb;
     }
+
     .features li::before {
-      content: '✔';
+      content: "✔";
       position: absolute;
       left: 0;
       color: #22c55e;
       font-weight: bold;
     }
-    .b2b {
-      background: #020617;
-      border-radius: 20px;
-      padding: 60px;
-      margin-top: 80px;
-    }
-    .b2b h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-    .b2b p {
-      font-size: 1.1rem;
-      color: #cbd5f5;
-      max-width: 800px;
-    }
-    .contact {
-      text-align: center;
-      margin-top: 80px;
-    }
-    .contact h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .contact-card {
-      display: inline-block;
-      background: #020617;
-      padding: 30px 50px;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease;
-    }
-    .contact-card:hover {
-      transform: translateY(-6px);
-    }
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 900px) {
-      .product {
-        grid-template-columns: 1fr;
-      }
-    }
-  .feature-block {
+
+    /* ===== Feature Blocks ===== */
+    .feature-block {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
       margin-bottom: 100px;
-      opacity: 0;
-      transform: translateY(80px);
-      animation: fadeUp 1s ease forwards;
     }
+
     .feature-block.reverse {
       direction: rtl;
     }
+
     .feature-block.reverse .feature-text {
       direction: ltr;
     }
+
     .feature-block img {
       width: 100%;
       border-radius: 20px;
     }
-    .feature-text h3 {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      color: #ffffff;
-    }
+
     .feature-text p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: #cbd5f5;
       max-width: 520px;
     }
+
+    /* ===== B2B Section ===== */
+    .b2b {
+      background: #f9fafb;
+      border-radius: 20px;
+      padding: 60px;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* ===== Contact ===== */
+    .contact {
+      text-align: center;
+    }
+
+    .contact-card {
+      display: inline-block;
+      background: #ffffff;
+      padding: 30px 50px;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    /* ===== Responsive ===== */
     @media (max-width: 900px) {
+      .product,
       .feature-block {
         grid-template-columns: 1fr;
       }
-    }
 
-</style>
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
   <h1>Professional Digital Timer for Global B2B Buyers</h1>
-  <p>High-precision dual-display digital timer designed for chess clubs, competitions, training centers, and OEM/ODM wholesale distribution.</p>
-  <a class="cta" href="https://wa.me/861340592964">Contact on WhatsApp</a>
+  <p>
+    High-precision dual-display digital timer designed for chess clubs,
+    competitions, training centers, and OEM/ODM wholesale partners.
+  </p>
+  <a class="cta" href="https://wa.me/861340592964" target="_blank">
+    Contact on WhatsApp
+  </a>
 </header>
 
 <section class="product">
-  <img src="/mnt/data/219ff975-9454-43b9-998a-eb6b5e898642.jpg" alt="Digital Timer Product" />
+  <img src="images/product-main.jpg" alt="Digital Timer">
   <div class="features">
     <h2>Product Highlights</h2>
     <ul>
       <li>Dual large LCD display for clear visibility</li>
       <li>High-sensitivity buttons for professional use</li>
-      <li>Accurate time control for competitive environments</li>
-      <li>Durable housing suitable for long-term usage</li>
-      <li>Custom branding & packaging available (OEM/ODM)</li>
+      <li>Accurate time control for competitions</li>
+      <li>Durable structure for long-term usage</li>
+      <li>OEM / ODM customization available</li>
     </ul>
   </div>
 </section>
 
-<section class="gallery">
-  <h2 style="font-size:2.4rem;margin-bottom:60px;">Product Gallery & Key Selling Points</h2>
-  
+<section>
+  <h2 style="margin-bottom:60px;">Key Selling Points</h2>
+
   <div class="feature-block">
-    <img src="images/product-1.jpg" alt="Dual Display" />
+    <img src="images/product-1.jpg" alt="">
     <div class="feature-text">
       <h3>High Visibility Dual Display</h3>
-      <p>Large dual LCD screens ensure clear readability even in bright tournament environments, reducing errors and improving competition fairness.</p>
+      <p>Large screens ensure clear readability in tournaments and clubs.</p>
     </div>
   </div>
 
   <div class="feature-block reverse">
-    <img src="images/product-2.jpg" alt="Sensitive Buttons" />
+    <img src="images/product-2.jpg" alt="">
     <div class="feature-text">
-      <h3>Professional-Grade Button Control</h3>
-      <p>High-sensitivity mechanical buttons provide fast response and long lifespan, suitable for intensive professional use.</p>
+      <h3>Professional Button Control</h3>
+      <p>Fast response, long lifespan, designed for intensive usage.</p>
     </div>
   </div>
 
   <div class="feature-block">
-    <img src="images/product-3.jpg" alt="Durable Housing" />
+    <img src="images/product-3.jpg" alt="">
     <div class="feature-text">
       <h3>Durable & Stable Structure</h3>
-      <p>Impact-resistant housing and internal stabilization design ensure long-term durability for clubs, schools, and tournaments.</p>
+      <p>Impact-resistant housing suitable for schools and tournaments.</p>
     </div>
   </div>
 </section>
@@ -286,54 +243,25 @@
 <section class="b2b">
   <h2>Why B2B Buyers Choose Us</h2>
   <p>
-    We specialize in supplying reliable digital timing devices for international distributors, tournament organizers, educational institutions, and brand owners. With stable production capacity, flexible MOQ, and fast response, we help partners scale their business efficiently.
+    Factory-direct supply · Stable production · Flexible MOQ · Global export experience.
   </p>
   <p>
-    ✔ Factory-direct pricing<br />
-    ✔ Bulk order & private label support<br />
-    ✔ Export experience for global markets
+    ✔ Wholesale pricing<br>
+    ✔ Private label support<br>
+    ✔ Fast quotation & response
   </p>
-</section>
-
-<section class="company">
-  <h2 style="font-size:2.4rem;margin-bottom:60px;">Company Credentials & Trust</h2>
-
-  <div class="feature-block">
-    <img src="images/company-1.jpg" alt="Factory" />
-    <div class="feature-text">
-      <h3>Modern Manufacturing Facility</h3>
-      <p>Our factory operates with standardized production lines, ensuring consistent quality and stable monthly output.</p>
-    </div>
-  </div>
-
-  <div class="feature-block reverse">
-    <img src="images/company-2.jpg" alt="Quality Control" />
-    <div class="feature-text">
-      <h3>Strict Quality Control System</h3>
-      <p>Each unit undergoes multi-stage inspection to meet international export standards.</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <img src="images/company-3.jpg" alt="OEM" />
-    <div class="feature-text">
-      <h3>OEM & ODM Customization</h3>
-      <p>We support logo printing, packaging customization, and private-label production for global partners.</p>
-    </div>
-  </div>
 </section>
 
 <section class="contact">
   <h2>Get Wholesale Pricing Now</h2>
   <div class="contact-card">
-    <p><strong>Phone:</strong> +86 1340592964</p>
     <p><strong>WhatsApp:</strong> +86 1340592964</p>
-    <p style="margin-top:15px; color:#22c55e;">Fast response · Direct factory · Global shipping</p>
+    <p style="color:#22c55e;">Fast response · Direct factory · Global shipping</p>
   </div>
 </section>
 
 <footer>
-  © 2026 Professional Digital Timer Manufacturer | B2B Supply Only
+  © 2026 Professional Digital Timer Manufacturer | B2B Only
 </footer>
 
 </body>
