@@ -1,268 +1,255 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Digital Timer | OEM & Wholesale</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SUNDATRAVEL | China Inbound DMC</title>
 
-  <style>
-    /* ===== Base ===== */
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #111111;
-      line-height: 1.6;
-    }
+<style>
+:root {
+  --black: #111;
+  --gray: #666;
+  --light: #f7f7f7;
+}
 
-    h1, h2, h3 {
-      color: #111111;
-      margin-bottom: 16px;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    p {
-      color: #374151;
-      margin-bottom: 16px;
-    }
+body {
+  color: var(--black);
+  background: #fff;
+  line-height: 1.6;
+}
 
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("header-bg.jpg") center/cover no-repeat;
+}
 
-    /* ===== Header ===== */
-    header {
-      position: relative;
-      padding: 120px 20px;
-      text-align: center;
-      color: #ffffff;
-      background-image: url("images/header-bg.jpg");
-      background-size: cover;
-      background-position: center;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
 
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  animation: heroFade 1.2s ease forwards;
+}
 
-    header * {
-      position: relative;
-      z-index: 1;
-    }
+.hero h1 {
+  font-size: 46px;
+  max-width: 700px;
+}
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 16px;
-    }
+.hero p {
+  margin-top: 15px;
+  max-width: 600px;
+  font-size: 18px;
+  opacity: 0.9;
+}
 
-    header p {
-      max-width: 760px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #e5e7eb;
-    }
+.hero a {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 14px 30px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  width: fit-content;
+}
 
-    .cta {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 30px;
-      background: #22c55e;
-      color: #020617;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: all 0.2s ease;
-    }
+/* ===== SECTION ===== */
+section {
+  padding: 80px 20px;
+}
 
-    .cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(34,197,94,0.4);
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    /* ===== Product Section ===== */
-    .product {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
 
-    .product img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
+.gray {
+  background: var(--light);
+}
 
-    .features ul {
-      list-style: none;
-      padding: 0;
-    }
+/* ===== LIST ===== */
+ul {
+  list-style: none;
+}
 
-    .features li {
-      margin-bottom: 14px;
-      padding-left: 26px;
-      position: relative;
-    }
+li {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  position: relative;
+}
 
-    .features li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: #22c55e;
-      font-weight: bold;
-    }
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
 
-    /* ===== Feature Blocks ===== */
-    .feature-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-bottom: 100px;
-    }
+/* ===== TRUST ===== */
+.trust-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 30px;
+}
 
-    .feature-block.reverse {
-      direction: rtl;
-    }
+.trust-item {
+  padding: 25px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
 
-    .feature-block.reverse .feature-text {
-      direction: ltr;
-    }
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+}
 
-    .feature-block img {
-      width: 100%;
-      border-radius: 20px;
-    }
+.cta a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 36px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-    .feature-text p {
-      max-width: 520px;
-    }
+/* ===== FOOTER ===== */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+}
 
-    /* ===== B2B Section ===== */
-    .b2b {
-      background: #f9fafb;
-      border-radius: 20px;
-      padding: 60px;
-      border: 1px solid #e5e7eb;
-    }
+/* ===== ANIMATION ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
 
-    /* ===== Contact ===== */
-    .contact {
-      text-align: center;
-    }
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .contact-card {
-      display: inline-block;
-      background: #ffffff;
-      padding: 30px 50px;
-      border-radius: 16px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 900px) {
-      .product,
-      .feature-block {
-        grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Professional Digital Timer for Global B2B Buyers</h1>
-  <p>
-    High-precision dual-display digital timer designed for chess clubs,
-    competitions, training centers, and OEM/ODM wholesale partners.
-  </p>
-  <a class="cta" href="https://wa.me/861340592964" target="_blank">
-    Contact on WhatsApp
-  </a>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>China Inbound DMC & Ground Handling Services</h1>
+    <p>Professional inbound tour solutions for overseas travel agencies. Reliable, flexible, and market-oriented.</p>
+    <a href="https://wa.me/85292724327" target="_blank">Contact via WhatsApp</a>
+  </div>
+</div>
 
-<section class="product">
-  <img src="images/product-main.jpg" alt="Digital Timer">
-  <div class="features">
-    <h2>Product Highlights</h2>
+<!-- ABOUT -->
+<section>
+  <div class="container fade-up">
+    <h2 class="section-title">About SUNDATRAVEL</h2>
     <ul>
-      <li>Dual large LCD display for clear visibility</li>
-      <li>High-sensitivity buttons for professional use</li>
-      <li>Accurate time control for competitions</li>
-      <li>Durable structure for long-term usage</li>
-      <li>OEM / ODM customization available</li>
+      <li>Licensed China Inbound Destination Management Company (DMC)</li>
+      <li>Customized private & group China tours</li>
+      <li>English-speaking guides & experienced local teams</li>
+      <li>Stable hotel, transport & attraction resources</li>
+      <li>Clients from Asia, Europe, America & Middle East</li>
     </ul>
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="gray">
+  <div class="container fade-up">
+    <h2 class="section-title">Our Services</h2>
+    <ul>
+      <li>Competitive China tour packages</li>
+      <li>Flexible itineraries based on your market</li>
+      <li>Full ground handling support in China</li>
+      <li>Fast quotation & dedicated coordinator</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRUST -->
 <section>
-  <h2 style="margin-bottom:60px;">Key Selling Points</h2>
-
-  <div class="feature-block">
-    <img src="images/product-1.jpg" alt="">
-    <div class="feature-text">
-      <h3>High Visibility Dual Display</h3>
-      <p>Large screens ensure clear readability in tournaments and clubs.</p>
-    </div>
-  </div>
-
-  <div class="feature-block reverse">
-    <img src="images/product-2.jpg" alt="">
-    <div class="feature-text">
-      <h3>Professional Button Control</h3>
-      <p>Fast response, long lifespan, designed for intensive usage.</p>
-    </div>
-  </div>
-
-  <div class="feature-block">
-    <img src="images/product-3.jpg" alt="">
-    <div class="feature-text">
-      <h3>Durable & Stable Structure</h3>
-      <p>Impact-resistant housing suitable for schools and tournaments.</p>
+  <div class="container fade-up">
+    <h2 class="section-title">Company Credentials & Trust</h2>
+    <div class="trust-box">
+      <div class="trust-item">✔ Licensed Inbound Tour Operator in China</div>
+      <div class="trust-item">✔ Experienced International Market Team</div>
+      <div class="trust-item">✔ Stable Supplier Network Nationwide</div>
+      <div class="trust-item">✔ Long-term Overseas Agency Cooperation</div>
     </div>
   </div>
 </section>
 
-<section class="b2b">
-  <h2>Why B2B Buyers Choose Us</h2>
-  <p>
-    Factory-direct supply · Stable production · Flexible MOQ · Global export experience.
-  </p>
-  <p>
-    ✔ Wholesale pricing<br>
-    ✔ Private label support<br>
-    ✔ Fast quotation & response
-  </p>
-</section>
-
-<section class="contact">
-  <h2>Get Wholesale Pricing Now</h2>
-  <div class="contact-card">
-    <p><strong>WhatsApp:</strong> +86 1340592964</p>
-    <p style="color:#22c55e;">Fast response · Direct factory · Global shipping</p>
+<!-- CTA -->
+<section class="gray">
+  <div class="container cta fade-up">
+    <h2 class="section-title">Let’s Explore Cooperation</h2>
+    <p>We are happy to share sample itineraries or discuss cooperation models.</p>
+    <a href="https://wa.me/85292724327" target="_blank">Chat on WhatsApp</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Professional Digital Timer Manufacturer | B2B Only
+  © SUNDATRAVEL | China Inbound DMC<br>
+  Website: sundatravel.com.cn
 </footer>
+
+<script>
+const items = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+items.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
