@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Professional Chess Clock | B2B Manufacturer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* ---------- Feature Layout ---------- */
+
+    .feature-block {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 100px;
+      opacity: 0;
+    }
+
+    .feature-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-text h3 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .feature-text p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .feature-image {
+      flex: 1;
+    }
+
+    .feature-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* ---------- Animations (方案 A) ---------- */
+
+    .fade-up {
+      transform: translateY(80px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .fade-left {
+      transform: translateX(-80px);
+      animation: fadeLeft 1s ease forwards;
+    }
+
+    .fade-right {
+      transform: translateX(80px);
+      animation: fadeRight 1s ease forwards;
+    }
+
+    .zoom-in {
+      transform: scale(0.9);
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .delay {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeLeft {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeRight {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes zoomIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ---------- Company Trust ---------- */
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .trust-card {
+      padding: 40px;
+      border-radius: 14px;
+      background: #f8f8f8;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .trust-card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .trust-card p {
+      color: #666;
+    }
+
+    /* ---------- Inquiry Form ---------- */
+
+    .form-box {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f8f8f8;
+      padding: 50px;
+      border-radius: 16px;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .form-box button {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 16px 30px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background: #333;
+    }
+
+    /* ---------- Contact ---------- */
+
+    .contact {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .contact h2 {
+      color: #fff;
+    }
+
+    .contact p {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    /* ---------- WhatsApp Floating ---------- */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    /* ---------- Responsive ---------- */
+
+    @media (max-width: 768px) {
+      .feature-block,
+      .feature-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= Product Gallery ================= -->
+
+<section>
+  <h2>Product Gallery & Key Selling Points</h2>
+
+  <div class="feature-block fade-up">
+    <div class="feature-image">
+      <img src="images/product1.jpg">
+    </div>
+    <div class="feature-text">
+      <h3>Professional Dual Display Design</h3>
+      <p>Clear dual LCD screens for accurate time control in tournaments and clubs.</p>
+    </div>
+  </div>
+
+  <div class="feature-block reverse fade-left">
+    <div class="feature-image">
+      <img src="images/product2.jpg">
+    </div>
+    <div class="feature-text">
+      <h3>High Precision Timing System</h3>
+      <p>Millisecond-level accuracy ensures fair and professional competitions.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= Company Trust ================= -->
+
+<section>
+  <h2>Company Credentials & Trust</h2>
+
+  <div class="trust-grid">
+    <div class="trust-card fade-up">
+      <h3>15+ Years</h3>
+      <p>Manufacturing Experience</p>
+    </div>
+
+    <div class="trust-card fade-left">
+      <h3>30+ Countries</h3>
+      <p>Export Markets</p>
+    </div>
+
+    <div class="trust-card fade-right">
+      <h3>50,000+</h3>
+      <p>Units Supplied</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Inquiry ================= -->
+
+<section>
+  <h2>Send Us Your Inquiry</h2>
+
+  <div class="form-box">
+    <form action="mailto:huang541920@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="text" name="Company" placeholder="Company Name">
+      <textarea name="Message" rows="5" placeholder="Your Inquiry"></textarea>
+      <button type="submit">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= Contact ================= -->
+
+<div class="contact">
+  <h2>Wholesale & OEM Contact</h2>
+  <p>📞 Phone / WhatsApp: +86 1340592964</p>
+  <p>📧 Email: huang541920@gmail.com</p>
+</div>
+
+<!-- ================= WhatsApp Floating Button ================= -->
+
+<a class="whatsapp-float" 
+   href="https://wa.me/861340592964" 
+   target="_blank">
+  💬
+</a>
+
+</body>
+</html>
