@@ -1,173 +1,126 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SUNDATRAVEL | China Inbound DMC</title>
+<meta charset="UTF-8">
+<title>Professional Digital Chess Clock Manufacturer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root {
-  --black: #111;
-  --gray: #666;
-  --light: #f7f7f7;
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f8f9fb;
+  color:#222;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+section{
+  max-width:1200px;
+  margin:120px auto;
+  padding:0 20px;
 }
 
-body {
-  color: var(--black);
-  background: #fff;
-  line-height: 1.6;
+h2{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:80px;
 }
 
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  height: 90vh;
-  background: url("header-bg.jpg") center/cover no-repeat;
+/* ===== Vertical Block ===== */
+.vertical-block{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  margin-bottom:140px;
+  opacity:0;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
+.vertical-block img{
+  width:50%;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #fff;
-  animation: heroFade 1.2s ease forwards;
+.v-text{
+  width:50%;
 }
 
-.hero h1 {
-  font-size: 46px;
-  max-width: 700px;
+.v-text h3{
+  font-size:30px;
+  margin-bottom:16px;
 }
 
-.hero p {
-  margin-top: 15px;
-  max-width: 600px;
-  font-size: 18px;
-  opacity: 0.9;
+.v-text p{
+  font-size:18px;
+  color:#555;
+  line-height:1.6;
 }
 
-.hero a {
-  margin-top: 30px;
-  display: inline-block;
-  padding: 14px 30px;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  width: fit-content;
+/* ===== Animations ===== */
+.fade-left{transform:translateX(-80px);animation:fadeLeft 1s forwards}
+.fade-right{transform:translateX(80px);animation:fadeRight 1s forwards}
+.fade-up{transform:translateY(80px);animation:fadeUp 1s forwards}
+.zoom-in{transform:scale(.9);animation:zoomIn 1s forwards}
+
+@keyframes fadeLeft{to{opacity:1;transform:none}}
+@keyframes fadeRight{to{opacity:1;transform:none}}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+@keyframes zoomIn{to{opacity:1;transform:none}}
+
+/* ===== Inquiry Form ===== */
+form{
+  background:#fff;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-/* ===== SECTION ===== */
-section {
-  padding: 80px 20px;
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:20px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:16px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
+button{
+  background:#111;
+  color:#fff;
+  border:none;
+  padding:16px 30px;
+  font-size:18px;
+  border-radius:8px;
+  cursor:pointer;
 }
 
-.section-title {
-  font-size: 32px;
-  margin-bottom: 30px;
+/* ===== WhatsApp Floating ===== */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  z-index:999;
 }
 
-.gray {
-  background: var(--light);
+.whatsapp img{
+  width:32px;
 }
 
-/* ===== LIST ===== */
-ul {
-  list-style: none;
-}
-
-li {
-  margin-bottom: 12px;
-  padding-left: 18px;
-  position: relative;
-}
-
-li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-}
-
-/* ===== TRUST ===== */
-.trust-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 30px;
-}
-
-.trust-item {
-  padding: 25px;
-  border: 1px solid #ddd;
-  background: #fff;
-}
-
-/* ===== CTA ===== */
-.cta {
-  text-align: center;
-}
-
-.cta a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 36px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  padding: 40px 20px;
-  text-align: center;
-  color: var(--gray);
-  font-size: 14px;
-}
-
-/* ===== ANIMATION ===== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes heroFade {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+/* ===== Mobile ===== */
+@media(max-width:900px){
+  .vertical-block{
+    flex-direction:column;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .vertical-block img,
+  .v-text{
+    width:100%;
   }
 }
 </style>
@@ -175,81 +128,155 @@ footer {
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <h1>China Inbound DMC & Ground Handling Services</h1>
-    <p>Professional inbound tour solutions for overseas travel agencies. Reliable, flexible, and market-oriented.</p>
-    <a href="https://wa.me/85292724327" target="_blank">Contact via WhatsApp</a>
+<!-- ===== Product Section ===== -->
+<section>
+<h2>Product Gallery & Key Selling Points</h2>
+
+<div class="vertical-block fade-left">
+  <img src="images/product1.jpg">
+  <div class="v-text">
+    <h3>Dual Large LCD Display</h3>
+    <p>Clear dual screen for both players with excellent visibility.</p>
   </div>
 </div>
 
-<!-- ABOUT -->
+<div class="vertical-block fade-right">
+  <img src="images/product2.jpg">
+  <div class="v-text">
+    <h3>High Precision Timing</h3>
+    <p>Millisecond accuracy meets professional tournament standards.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-up">
+  <img src="images/product3.jpg">
+  <div class="v-text">
+    <h3>Fast Response Buttons</h3>
+    <p>Instant tactile feedback improves competitive experience.</p>
+  </div>
+</div>
+
+<div class="vertical-block zoom-in">
+  <img src="images/product4.jpg">
+  <div class="v-text">
+    <h3>Durable ABS Material</h3>
+    <p>Impact-resistant shell designed for long-term usage.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-left">
+  <img src="images/product5.jpg">
+  <div class="v-text">
+    <h3>Compact & Portable</h3>
+    <p>Lightweight design ideal for tournaments and clubs.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-right">
+  <img src="images/product6.jpg">
+  <div class="v-text">
+    <h3>Low Power Consumption</h3>
+    <p>Optimized circuit extends battery life significantly.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-up">
+  <img src="images/product7.jpg">
+  <div class="v-text">
+    <h3>International Time Modes</h3>
+    <p>Supports multiple chess timing formats.</p>
+  </div>
+</div>
+
+<div class="vertical-block zoom-in">
+  <img src="images/product8.jpg">
+  <div class="v-text">
+    <h3>Anti-Slip Base</h3>
+    <p>Stable placement on any surface.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-left">
+  <img src="images/product9.jpg">
+  <div class="v-text">
+    <h3>OEM Custom Branding</h3>
+    <p>Logo, color and packaging customization available.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-right">
+  <img src="images/product10.jpg">
+  <div class="v-text">
+    <h3>Wholesale Ready</h3>
+    <p>Designed for bulk supply and international distribution.</p>
+  </div>
+</div>
+
+</section>
+
+<!-- ===== Company Credentials ===== -->
 <section>
-  <div class="container fade-up">
-    <h2 class="section-title">About SUNDATRAVEL</h2>
-    <ul>
-      <li>Licensed China Inbound Destination Management Company (DMC)</li>
-      <li>Customized private & group China tours</li>
-      <li>English-speaking guides & experienced local teams</li>
-      <li>Stable hotel, transport & attraction resources</li>
-      <li>Clients from Asia, Europe, America & Middle East</li>
-    </ul>
+<h2>Company Credentials & Trust</h2>
+
+<div class="vertical-block fade-left">
+  <img src="images/company1.jpg">
+  <div class="v-text">
+    <h3>15+ Years Manufacturing Experience</h3>
+    <p>Specialized in professional chess clocks.</p>
   </div>
+</div>
+
+<div class="vertical-block fade-right">
+  <img src="images/company2.jpg">
+  <div class="v-text">
+    <h3>Strict Quality Control</h3>
+    <p>Each unit tested before shipment.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-up">
+  <img src="images/company3.jpg">
+  <div class="v-text">
+    <h3>OEM & ODM Supported</h3>
+    <p>Custom solutions for global brands.</p>
+  </div>
+</div>
+
+<div class="vertical-block zoom-in">
+  <img src="images/company4.jpg">
+  <div class="v-text">
+    <h3>Global Export Experience</h3>
+    <p>Serving clients across Europe & Asia.</p>
+  </div>
+</div>
+
+<div class="vertical-block fade-left">
+  <img src="images/company5.jpg">
+  <div class="v-text">
+    <h3>Professional Sales Team</h3>
+    <p>Fast response & reliable service.</p>
+  </div>
+</div>
+
 </section>
 
-<!-- SERVICES -->
-<section class="gray">
-  <div class="container fade-up">
-    <h2 class="section-title">Our Services</h2>
-    <ul>
-      <li>Competitive China tour packages</li>
-      <li>Flexible itineraries based on your market</li>
-      <li>Full ground handling support in China</li>
-      <li>Fast quotation & dedicated coordinator</li>
-    </ul>
-  </div>
-</section>
-
-<!-- TRUST -->
+<!-- ===== Inquiry Form ===== -->
 <section>
-  <div class="container fade-up">
-    <h2 class="section-title">Company Credentials & Trust</h2>
-    <div class="trust-box">
-      <div class="trust-item">✔ Licensed Inbound Tour Operator in China</div>
-      <div class="trust-item">✔ Experienced International Market Team</div>
-      <div class="trust-item">✔ Stable Supplier Network Nationwide</div>
-      <div class="trust-item">✔ Long-term Overseas Agency Cooperation</div>
-    </div>
-  </div>
+<h2>Inquiry Now</h2>
+
+<form action="https://formsubmit.co/huang541920@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Inquiry" rows="6"></textarea>
+  <button type="submit">Send Inquiry</button>
+</form>
+
 </section>
 
-<!-- CTA -->
-<section class="gray">
-  <div class="container cta fade-up">
-    <h2 class="section-title">Let’s Explore Cooperation</h2>
-    <p>We are happy to share sample itineraries or discuss cooperation models.</p>
-    <a href="https://wa.me/85292724327" target="_blank">Chat on WhatsApp</a>
-  </div>
-</section>
-
-<footer>
-  © SUNDATRAVEL | China Inbound DMC<br>
-  Website: sundatravel.com.cn
-</footer>
-
-<script>
-const items = document.querySelectorAll('.fade-up');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.2 });
-
-items.forEach(el => observer.observe(el));
-</script>
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/85253630941" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 </body>
 </html>
