@@ -1,31 +1,55 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>B2B Product Showcase</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B2B Digital Timer Manufacturer | OEM Wholesale</title>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 <style>
-:root{
-  --bg:#0b1220;
-  --panel:#0f172a;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-  --accent:#22c55e;
-}
-*{box-sizing:border-box}
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0e1117;
+  color:#fff;
+}
+section{
+  padding:80px 6%;
+}
+h2{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:36px;
+}
+.row{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  margin-bottom:80px;
+}
+.row.reverse{
+  flex-direction:row-reverse;
+}
+.row img{
+  width:50%;
+  border-radius:14px;
+}
+.row .text{
+  width:50%;
+}
+.row h3{
+  font-size:26px;
+  margin-bottom:15px;
+}
+.row p{
+  line-height:1.7;
+  color:#c9d1d9;
 }
 
-/* ===== HERO VIDEO ===== */
+/* Header Video */
 .hero{
   position:relative;
-  width:100%;
   height:100vh;
   overflow:hidden;
 }
@@ -34,163 +58,68 @@ body{
   height:100%;
   object-fit:cover;
 }
-.hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(2,6,23,.65);
-}
-
-/* HERO CONTENT RIGHT */
 .hero-content{
   position:absolute;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-end;
+  right:6%;
+  top:50%;
+  transform:translateY(-50%);
   text-align:right;
-  padding:80px 8vw;
-  z-index:2;
-}
-.hero h1{
-  font-size:3rem;
-  max-width:700px;
-}
-.hero p{
-  max-width:560px;
-  color:var(--muted);
-  font-size:1.15rem;
-}
-.hero .cta{
-  margin-top:30px;
-  padding:16px 36px;
-  background:var(--accent);
-  color:#022c22;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:10px;
-}
-
-/* VIDEO CONTROL */
-.video-control{
-  position:absolute;
-  bottom:40px;
-  right:40px;
-  z-index:3;
-  background:rgba(0,0,0,.6);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.3);
-  padding:12px 20px;
-  border-radius:30px;
-  cursor:pointer;
-  backdrop-filter:blur(6px);
-}
-
-/* ===== SECTION ===== */
-section{
-  padding:120px 6vw;
-}
-.section-title{
-  text-align:center;
-  font-size:2.4rem;
-  margin-bottom:80px;
-}
-
-/* FEATURE BLOCK */
-.feature{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:80px;
-  align-items:center;
-  margin-bottom:140px;
-  opacity:0;
-  transform:translateY(80px);
-}
-.feature.show{
-  opacity:1;
-  transform:translateY(0);
-  transition:1s ease;
-}
-.feature.reverse{direction:rtl}
-.feature.reverse .text{direction:ltr}
-.feature img{
-  width:100%;
-  border-radius:22px;
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
-}
-.feature h3{
-  font-size:2rem;
-  margin-bottom:20px;
-}
-.feature p{
-  color:var(--muted);
   max-width:520px;
 }
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+.hero-content p{
+  font-size:18px;
+  color:#e6edf3;
+}
+.video-btn{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:48px;
+  cursor:pointer;
+  background:rgba(0,0,0,0.4);
+  border-radius:50%;
+  padding:14px 18px;
+}
 
-/* FORM */
-.form-wrap{
-  max-width:900px;
-  margin:auto;
-  background:var(--panel);
-  padding:60px;
-  border-radius:24px;
-}
-.form-wrap h2{
-  text-align:center;
-  margin-bottom:40px;
-}
+/* Form */
 form{
-  display:grid;
-  gap:20px;
+  max-width:700px;
+  margin:0 auto;
 }
-input,textarea{
-  padding:14px 16px;
-  border-radius:10px;
+input, textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:18px;
+  border-radius:6px;
   border:none;
-  font-size:1rem;
 }
 button{
-  padding:16px;
-  background:var(--accent);
+  padding:14px;
+  width:100%;
+  background:#25D366;
   border:none;
-  border-radius:12px;
-  font-size:1.1rem;
-  font-weight:700;
+  color:#000;
+  font-size:18px;
+  border-radius:6px;
   cursor:pointer;
 }
 
-/* FOOTER */
-footer{
-  padding:40px;
-  text-align:center;
-  color:#64748b;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float{
+/* WhatsApp Floating */
+.whatsapp{
   position:fixed;
-  right:26px;
-  bottom:26px;
-  width:64px;
-  height:64px;
+  right:20px;
+  bottom:20px;
   background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
-  z-index:9999;
-}
-.whatsapp-float svg{width:34px;height:34px}
-
-@media(max-width:900px){
-  .feature{grid-template-columns:1fr}
-  .hero-content{
-    align-items:center;
-    text-align:center;
-  }
-  .hero h1{font-size:2.2rem}
+  color:#000;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:bold;
+  text-decoration:none;
 }
 </style>
 </head>
@@ -199,108 +128,113 @@ footer{
 
 <!-- HERO -->
 <div class="hero">
-  <video id="heroVideo" playsinline muted>
-    <source src="video/hero.mp4" type="video/mp4">
+  <video id="heroVideo" autoplay muted loop>
+    <source src="video/header.mp4" type="video/mp4">
   </video>
 
-  <div class="hero-content">
-    <h1>Professional Digital Timer Manufacturer</h1>
-    <p>OEM / ODM wholesale solutions for distributors, tournaments and institutions worldwide.</p>
-    <a class="cta" href="https://wa.me/86134205929265">Chat on WhatsApp</a>
+  <div class="hero-content" data-aos="fade-left">
+    <h1>Professional B2B Product Solutions</h1>
+    <p>Designed for global partners, distributors and wholesale buyers.</p>
   </div>
 
-  <div class="video-control" id="videoBtn">▶ Play</div>
+  <div class="video-btn" id="videoBtn">⏸</div>
 </div>
 
-<!-- PRODUCT -->
+<!-- PRODUCTS -->
 <section>
-<h2 class="section-title">Product Key Selling Points</h2>
+<h2>Product Gallery & Key Selling Points</h2>
 
-<div class="feature">
-  <img src="images/product-1.jpg">
-  <div class="text">
-    <h3>Dual Large LCD Display</h3>
-    <p>Clear visibility from any angle, ideal for professional competitions.</p>
-  </div>
+<div class="row" data-aos="fade-right">
+<img src="images/product1.jpg">
+<div class="text"><h3>High Performance</h3><p>Engineered for durability and stable long-term operation.</p></div>
 </div>
 
-<div class="feature reverse">
-  <img src="images/product-2.jpg">
-  <div class="text">
-    <h3>High Sensitivity Buttons</h3>
-    <p>Fast response and long lifespan for intensive use.</p>
-  </div>
+<div class="row reverse" data-aos="fade-left">
+<img src="images/product2.jpg">
+<div class="text"><h3>OEM & Customization</h3><p>Support private labeling, packaging and technical specs.</p></div>
 </div>
+
+<div class="row" data-aos="zoom-in">
+<img src="images/product3.jpg">
+<div class="text"><h3>Global Standards</h3><p>Manufactured according to international quality benchmarks.</p></div>
+</div>
+
+<div class="row reverse" data-aos="slide-up">
+<img src="images/product4.jpg">
+<div class="text"><h3>Cost Efficiency</h3><p>Optimized production for competitive wholesale pricing.</p></div>
+</div>
+
+<div class="row" data-aos="fade-up">
+<img src="images/product5.jpg">
+<div class="text"><h3>Fast Delivery</h3><p>Stable supply chain and reliable export experience.</p></div>
+</div>
+
+<!-- 6-10 自行按此结构复制即可 -->
+
 </section>
 
-<!-- COMPANY -->
+<!-- TRUST -->
 <section>
-<h2 class="section-title">Company Credentials & Trust</h2>
+<h2>Company Credentials & Trust</h2>
 
-<div class="feature">
-  <img src="images/company-1.jpg">
-  <div class="text">
-    <h3>Modern Manufacturing Facility</h3>
-    <p>Stable capacity with standardized production lines.</p>
-  </div>
+<div class="row reverse" data-aos="fade-right">
+<img src="images/trust1.jpg">
+<div class="text"><h3>10+ Years Manufacturing</h3><p>Deep experience serving global B2B clients.</p></div>
 </div>
 
-<div class="feature reverse">
-  <img src="images/company-2.jpg">
-  <div class="text">
-    <h3>OEM / ODM Capability</h3>
-    <p>Private label, logo printing and custom packaging supported.</p>
-  </div>
+<div class="row" data-aos="fade-left">
+<img src="images/trust2.jpg">
+<div class="text"><h3>Export to 30+ Countries</h3><p>Trusted by partners worldwide.</p></div>
 </div>
+
+<div class="row reverse" data-aos="zoom-in">
+<img src="images/trust3.jpg">
+<div class="text"><h3>Strict QC System</h3><p>Every batch inspected before shipment.</p></div>
+</div>
+
+<div class="row" data-aos="slide-up">
+<img src="images/trust4.jpg">
+<div class="text"><h3>Professional Team</h3><p>Sales, engineering and logistics support.</p></div>
+</div>
+
+<div class="row reverse" data-aos="fade-up">
+<img src="images/trust5.jpg">
+<div class="text"><h3>Long-term Partnerships</h3><p>Focused on sustainable B2B cooperation.</p></div>
+</div>
+
 </section>
 
-<!-- INQUIRY FORM -->
+<!-- FORM -->
 <section>
-<div class="form-wrap">
-<h2>Send Inquiry</h2>
+<h2>Inquiry Form</h2>
 
 <form action="https://formsubmit.co/huang541920@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-
-  <input type="text" name="Name" placeholder="Your Name" required>
-  <input type="email" name="Email" placeholder="Your Email" required>
-  <input type="text" name="Company" placeholder="Company Name">
-  <textarea name="Message" rows="5" placeholder="Your inquiry" required></textarea>
-
-  <button type="submit">Submit Inquiry</button>
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="text" name="Company" placeholder="Company Name">
+<input type="email" name="Email" placeholder="Email" required>
+<input type="text" name="WhatsApp" placeholder="WhatsApp">
+<textarea name="Message" placeholder="Your Inquiry" rows="5" required></textarea>
+<button type="submit">Send Inquiry</button>
 </form>
-</div>
 </section>
 
-<footer>
-📧 huang541920@gmail.com · 📱 +86 13420592964 · 💬 WhatsApp +86 134205929265
-</footer>
+<a class="whatsapp" href="https://wa.me/86134205929265" target="_blank">WhatsApp</a>
 
-<a href="https://wa.me/86134205929265" class="whatsapp-float" target="_blank">
-<svg viewBox="0 0 32 32">
-<path fill="#fff" d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.3 7L4 29l7.2-2.3c2 .9 4.2 1.4 4.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
-</svg>
-</a>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-/* scroll animation */
-const items=document.querySelectorAll('.feature');
-const io=new IntersectionObserver(e=>{
-  e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')});
-},{threshold:.25});
-items.forEach(i=>io.observe(i));
+AOS.init({once:true});
 
-/* video play pause */
-const video=document.getElementById('heroVideo');
-const btn=document.getElementById('videoBtn');
-btn.onclick=()=>{
+const video = document.getElementById('heroVideo');
+const btn = document.getElementById('videoBtn');
+
+btn.onclick = () => {
   if(video.paused){
     video.play();
-    btn.textContent='⏸ Pause';
+    btn.innerHTML = '⏸';
   }else{
     video.pause();
-    btn.textContent='▶ Play';
+    btn.innerHTML = '▶';
   }
 };
 </script>
