@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,9 +13,7 @@
   --muted:#94a3b8;
   --accent:#22c55e;
 }
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
@@ -40,25 +38,27 @@ body{
   content:'';
   position:absolute;
   inset:0;
-  background:rgba(2,6,23,.6);
+  background:rgba(2,6,23,.65);
 }
+
+/* HERO CONTENT RIGHT */
 .hero-content{
   position:absolute;
   inset:0;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px;
+  align-items:flex-end;
+  text-align:right;
+  padding:80px 8vw;
   z-index:2;
 }
 .hero h1{
   font-size:3rem;
-  max-width:900px;
+  max-width:700px;
 }
 .hero p{
-  max-width:720px;
+  max-width:560px;
   color:var(--muted);
   font-size:1.15rem;
 }
@@ -72,18 +72,32 @@ body{
   border-radius:10px;
 }
 
-/* ===== SECTIONS ===== */
+/* VIDEO CONTROL */
+.video-control{
+  position:absolute;
+  bottom:40px;
+  right:40px;
+  z-index:3;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.3);
+  padding:12px 20px;
+  border-radius:30px;
+  cursor:pointer;
+  backdrop-filter:blur(6px);
+}
+
+/* ===== SECTION ===== */
 section{
-  width:100%;
   padding:120px 6vw;
 }
 .section-title{
+  text-align:center;
   font-size:2.4rem;
   margin-bottom:80px;
-  text-align:center;
 }
 
-/* ===== FEATURE BLOCK ===== */
+/* FEATURE BLOCK */
 .feature{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -98,12 +112,8 @@ section{
   transform:translateY(0);
   transition:1s ease;
 }
-.feature.reverse{
-  direction:rtl;
-}
-.feature.reverse .text{
-  direction:ltr;
-}
+.feature.reverse{direction:rtl}
+.feature.reverse .text{direction:ltr}
 .feature img{
   width:100%;
   border-radius:22px;
@@ -118,7 +128,7 @@ section{
   max-width:520px;
 }
 
-/* ===== INQUIRY FORM ===== */
+/* FORM */
 .form-wrap{
   max-width:900px;
   margin:auto;
@@ -150,14 +160,14 @@ button{
   cursor:pointer;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   padding:40px;
   text-align:center;
   color:#64748b;
 }
 
-/* ===== WHATSAPP FLOAT ===== */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
   right:26px;
@@ -176,6 +186,10 @@ footer{
 
 @media(max-width:900px){
   .feature{grid-template-columns:1fr}
+  .hero-content{
+    align-items:center;
+    text-align:center;
+  }
   .hero h1{font-size:2.2rem}
 }
 </style>
@@ -185,17 +199,20 @@ footer{
 
 <!-- HERO -->
 <div class="hero">
-  <video autoplay muted loop playsinline>
+  <video id="heroVideo" playsinline muted>
     <source src="video/hero.mp4" type="video/mp4">
   </video>
+
   <div class="hero-content">
     <h1>Professional Digital Timer Manufacturer</h1>
-    <p>OEM / ODM wholesale solutions for distributors, tournaments, and educational institutions worldwide.</p>
-    <a class="cta" href="https://wa.me/861340592964">Chat on WhatsApp</a>
+    <p>OEM / ODM wholesale solutions for distributors, tournaments and institutions worldwide.</p>
+    <a class="cta" href="https://wa.me/86134205929265">Chat on WhatsApp</a>
   </div>
+
+  <div class="video-control" id="videoBtn">▶ Play</div>
 </div>
 
-<!-- PRODUCT FEATURES -->
+<!-- PRODUCT -->
 <section>
 <h2 class="section-title">Product Key Selling Points</h2>
 
@@ -203,34 +220,17 @@ footer{
   <img src="images/product-1.jpg">
   <div class="text">
     <h3>Dual Large LCD Display</h3>
-    <p>Clear visibility from any angle, ideal for professional tournaments and training centers.</p>
+    <p>Clear visibility from any angle, ideal for professional competitions.</p>
   </div>
 </div>
 
 <div class="feature reverse">
   <img src="images/product-2.jpg">
   <div class="text">
-    <h3>High Sensitivity Control Buttons</h3>
-    <p>Fast response, long lifespan, designed for high-frequency competitive use.</p>
+    <h3>High Sensitivity Buttons</h3>
+    <p>Fast response and long lifespan for intensive use.</p>
   </div>
 </div>
-
-<div class="feature">
-  <img src="images/product-3.jpg">
-  <div class="text">
-    <h3>Accurate Time Control System</h3>
-    <p>Stable internal circuit ensures precise timing without drift.</p>
-  </div>
-</div>
-
-<div class="feature reverse">
-  <img src="images/product-4.jpg">
-  <div class="text">
-    <h3>Durable Housing</h3>
-    <p>Impact-resistant shell suitable for long-term commercial environments.</p>
-  </div>
-</div>
-
 </section>
 
 <!-- COMPANY -->
@@ -241,61 +241,68 @@ footer{
   <img src="images/company-1.jpg">
   <div class="text">
     <h3>Modern Manufacturing Facility</h3>
-    <p>Standardized production lines with stable monthly capacity.</p>
+    <p>Stable capacity with standardized production lines.</p>
   </div>
 </div>
 
 <div class="feature reverse">
   <img src="images/company-2.jpg">
   <div class="text">
-    <h3>Strict Quality Control</h3>
-    <p>Multi-step inspection process for export-quality assurance.</p>
+    <h3>OEM / ODM Capability</h3>
+    <p>Private label, logo printing and custom packaging supported.</p>
   </div>
 </div>
-
-<div class="feature">
-  <img src="images/company-3.jpg">
-  <div class="text">
-    <h3>OEM / ODM Customization</h3>
-    <p>Logo printing, packaging, and private label solutions.</p>
-  </div>
-</div>
-
 </section>
 
-<!-- INQUIRY -->
+<!-- INQUIRY FORM -->
 <section>
 <div class="form-wrap">
 <h2>Send Inquiry</h2>
-<form action="mailto:huang541920@gmail.com" method="post" enctype="text/plain">
+
+<form action="https://formsubmit.co/huang541920@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
   <input type="text" name="Name" placeholder="Your Name" required>
   <input type="email" name="Email" placeholder="Your Email" required>
   <input type="text" name="Company" placeholder="Company Name">
-  <textarea name="Message" rows="5" placeholder="Your inquiry"></textarea>
+  <textarea name="Message" rows="5" placeholder="Your inquiry" required></textarea>
+
   <button type="submit">Submit Inquiry</button>
 </form>
 </div>
 </section>
 
 <footer>
-© 2026 Digital Timer Manufacturer · B2B Wholesale Only
+📧 huang541920@gmail.com · 📱 +86 13420592964 · 💬 WhatsApp +86 134205929265
 </footer>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/861340592964" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/86134205929265" class="whatsapp-float" target="_blank">
 <svg viewBox="0 0 32 32">
 <path fill="#fff" d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.3 7L4 29l7.2-2.3c2 .9 4.2 1.4 4.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
 </svg>
 </a>
 
 <script>
+/* scroll animation */
 const items=document.querySelectorAll('.feature');
 const io=new IntersectionObserver(e=>{
-  e.forEach(i=>{
-    if(i.isIntersecting)i.target.classList.add('show');
-  });
+  e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')});
 },{threshold:.25});
 items.forEach(i=>io.observe(i));
+
+/* video play pause */
+const video=document.getElementById('heroVideo');
+const btn=document.getElementById('videoBtn');
+btn.onclick=()=>{
+  if(video.paused){
+    video.play();
+    btn.textContent='⏸ Pause';
+  }else{
+    video.pause();
+    btn.textContent='▶ Play';
+  }
+};
 </script>
 
 </body>
