@@ -11,10 +11,10 @@ body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
   background:#0f172a;
   color:#e5e7eb;
-  line-height:1.6;
+  line-height:1.7;
 }
 
-/* ========== HERO ========== */
+/* ================= HERO ================= */
 .hero{
   position:relative;
   height:100vh;
@@ -29,19 +29,19 @@ body{
   top:50%;
   right:6%;
   transform:translateY(-50%);
-  max-width:420px;
+  max-width:520px;
   text-align:right;
 }
 .hero-text h1{
-  font-size:42px;
-  margin-bottom:12px;
+  font-size:52px;
+  margin-bottom:14px;
 }
 .hero-text p{
-  font-size:18px;
+  font-size:20px;
   color:#cbd5f5;
 }
 
-/* 视频按钮 */
+/* Video control */
 .video-toggle{
   position:absolute;
   bottom:40px;
@@ -58,80 +58,94 @@ body{
 }
 .video-toggle svg{fill:#fff;width:26px}
 
-/* ========== SECTION ========== */
+/* ================= SECTIONS ================= */
 section{
-  padding:90px 6%;
-  max-width:1400px;
-  margin:auto;
+  padding:110px 6%;
 }
+
+/* 全宽区块 */
+.full-width{
+  width:100%;
+  padding-left:6%;
+  padding-right:6%;
+}
+
 .section-title{
-  font-size:36px;
-  margin-bottom:70px;
+  font-size:44px;
+  margin-bottom:90px;
   text-align:center;
 }
 
-/* ========== FEATURE BLOCK ========== */
+/* ================= FEATURE BLOCK ================= */
 .feature{
   display:flex;
   align-items:center;
-  gap:70px;
-  margin-bottom:110px;
+  gap:90px;
+  margin-bottom:140px;
   opacity:0;
 }
 .feature:nth-child(even){flex-direction:row-reverse}
 .feature img{
   width:50%;
-  border-radius:18px;
+  border-radius:20px;
 }
-.feature-text{width:50%}
+.feature-text{
+  width:50%;
+}
 .feature-text h3{
-  font-size:28px;
-  margin-bottom:14px;
+  font-size:34px;
+  margin-bottom:18px;
 }
 .feature-text p{
-  font-size:17px;
+  font-size:20px;
   color:#cbd5f5;
 }
 
-/* ========== 动画 ========== */
-.fade-up{transform:translateY(70px)}
-.fade-left{transform:translateX(-80px)}
-.fade-right{transform:translateX(80px)}
-.scale-in{transform:scale(.9)}
+/* ================= ANIMATION ================= */
+.fade-up{transform:translateY(80px)}
+.fade-left{transform:translateX(-90px)}
+.fade-right{transform:translateX(90px)}
+.scale-in{transform:scale(.92)}
 
 .show{
   opacity:1;
   transform:none;
-  transition:all .9s cubic-bezier(.22,.61,.36,1);
+  transition:all 1s cubic-bezier(.22,.61,.36,1);
 }
 
-/* ========== CONTACT FORM ========== */
+/* ================= CONTACT FORM ================= */
 .contact{
-  background:#020617;
-  border-radius:30px;
+  background:linear-gradient(135deg,#020617,#020617);
+  border-radius:40px;
+}
+.contact .section-title{
+  margin-bottom:60px;
 }
 form{
-  max-width:520px;
+  max-width:640px;
   margin:auto;
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:18px;
 }
 input,textarea{
-  padding:14px;
-  border-radius:6px;
+  padding:18px;
+  border-radius:8px;
   border:none;
+  font-size:18px;
 }
+textarea{min-height:140px}
 button{
-  padding:14px;
+  padding:18px;
   background:#22c55e;
   border:none;
   color:#020617;
+  font-size:18px;
   font-weight:bold;
   cursor:pointer;
 }
 
-/* ========== SUCCESS POPUP ========== */
+/* Popup */
 .popup{
   position:fixed;
   inset:0;
@@ -144,12 +158,12 @@ button{
 .popup-box{
   background:#fff;
   color:#020617;
-  padding:40px;
-  border-radius:16px;
+  padding:50px;
+  border-radius:20px;
   text-align:center;
 }
 
-/* ========== WHATSAPP ========== */
+/* WhatsApp */
 .whatsapp{
   position:fixed;
   right:26px;
@@ -197,55 +211,40 @@ button{
   </button>
 </div>
 
-<!-- PRODUCT SELLING POINTS -->
-<section>
+<!-- PRODUCT -->
+<section class="full-width">
 <h2 class="section-title">Product Gallery & Key Selling Points</h2>
 
-<!-- 10 条卖点 -->
 <div class="feature fade-left"><img src="images/product1.jpg"><div class="feature-text"><h3>Dual Large LCD Display</h3><p>Clear visibility from both sides for professional competitions.</p></div></div>
-
 <div class="feature fade-right"><img src="images/product2.jpg"><div class="feature-text"><h3>High Sensitivity Buttons</h3><p>Fast response mechanical buttons for intensive usage.</p></div></div>
-
 <div class="feature scale-in"><img src="images/product3.jpg"><div class="feature-text"><h3>Accurate Time Control</h3><p>Precise internal timing module ensures fairness.</p></div></div>
-
 <div class="feature fade-left"><img src="images/product4.jpg"><div class="feature-text"><h3>Durable Housing</h3><p>Impact-resistant body for long-term operation.</p></div></div>
-
 <div class="feature fade-right"><img src="images/product5.jpg"><div class="feature-text"><h3>Stable Base Design</h3><p>No slipping during matches.</p></div></div>
-
 <div class="feature scale-in"><img src="images/product6.jpg"><div class="feature-text"><h3>Low Power Consumption</h3><p>Extended battery life.</p></div></div>
-
 <div class="feature fade-left"><img src="images/product7.jpg"><div class="feature-text"><h3>Simple Operation Logic</h3><p>Easy to use for all age groups.</p></div></div>
-
 <div class="feature fade-right"><img src="images/product8.jpg"><div class="feature-text"><h3>Professional Tournament Ready</h3><p>Designed for official competitions.</p></div></div>
-
 <div class="feature scale-in"><img src="images/product9.jpg"><div class="feature-text"><h3>OEM Branding Support</h3><p>Custom logo and packaging available.</p></div></div>
-
 <div class="feature fade-up"><img src="images/product10.jpg"><div class="feature-text"><h3>Bulk Supply Capability</h3><p>Stable output for large orders.</p></div></div>
 
 </section>
 
-<!-- COMPANY CREDENTIALS -->
-<section>
+<!-- COMPANY -->
+<section class="full-width">
 <h2 class="section-title">Company Credentials & Trust</h2>
 
 <div class="feature fade-left"><img src="images/company1.jpg"><div class="feature-text"><h3>Modern Manufacturing Facility</h3><p>Standardized production lines ensure consistency.</p></div></div>
-
 <div class="feature fade-right"><img src="images/company2.jpg"><div class="feature-text"><h3>Strict Quality Control</h3><p>Multiple inspections before shipment.</p></div></div>
-
 <div class="feature scale-in"><img src="images/company3.jpg"><div class="feature-text"><h3>OEM / ODM Capability</h3><p>Private label solutions for global brands.</p></div></div>
-
 <div class="feature fade-left"><img src="images/company4.jpg"><div class="feature-text"><h3>Global Export Experience</h3><p>Serving distributors worldwide.</p></div></div>
-
 <div class="feature fade-up"><img src="images/company5.jpg"><div class="feature-text"><h3>Reliable Long-Term Partner</h3><p>Trusted by repeat B2B clients.</p></div></div>
 
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section class="contact full-width">
 <h2 class="section-title">Send Inquiry</h2>
 
-<form action="https://formsubmit.co/huang541920@gmail.com"
-method="POST" target="hiddenFrame">
+<form action="https://formsubmit.co/huang541920@gmail.com" method="POST" target="hiddenFrame">
 <input type="hidden" name="_captcha" value="false">
 <input name="Company" placeholder="Company Name" required>
 <input name="Name" placeholder="Your Name" required>
@@ -269,14 +268,13 @@ method="POST" target="hiddenFrame">
 </a>
 
 <script>
-/* 视频播放 */
 const v=document.getElementById('heroVideo'),
 t=document.getElementById('videoToggle'),
 p=document.getElementById('playIcon'),
 s=document.getElementById('pauseIcon');
+
 t.onclick=()=>{v.paused?(v.play(),p.style.display='none',s.style.display='block'):(v.pause(),p.style.display='block',s.style.display='none')}
 
-/* 动画 */
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show')));
 document.querySelectorAll('.fade-up,.fade-left,.fade-right,.scale-in').forEach(el=>io.observe(el));
 
